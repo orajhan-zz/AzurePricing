@@ -2,12 +2,12 @@ import requests
 from pymongo import MongoClient
 
 # My MongoDB in Atlas
-uri = 'mongodb+srv://jhan:***********@jhanmongo.i5sp1.mongodb.net/<Database>?retryWrites=true&w=majority'
+uri = 'mongodb+srv://jhan:***********@jhan.i5sp1.mongodb.net/<Database>?retryWrites=true&w=majority'
 # Refer to https://api.mongodb.com/python/current/examples/tls.html#troubleshooting-tls-errors
 cluster = MongoClient(uri,ssl=True,ssl_cert_reqs='CERT_NONE')
 
 # CosmoDB with MongoDB API in Azure
-#uri = "mongodb://jhancosmodb:*****==@jhancosmodb.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@jhancosmodb@"
+#uri = "mongodb://cosmodb:*****==@cosmodb.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@cosmodb@"
 #cluster = MongoClient(uri)
 
 
