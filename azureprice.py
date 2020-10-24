@@ -11,7 +11,7 @@ cluster = MongoClient(uri,ssl=True,ssl_cert_reqs='CERT_NONE')
 #cluster = MongoClient(uri)
 
 
-#def get_azure_price_list(azure_url):
+def Get_azure_price_list(azure_url):
     res = requests.get(azure_url)
     prices = res.json()
     return prices
@@ -40,7 +40,7 @@ if __name__ == "__main__":
             print("no more uri")
             break
         else:
-            azure_price_list = get_azure_price_list(azure_url)
+            azure_price_list = Get_azure_price_list(azure_url)
             # Push documents into MongoDB
             collection.insert_many(azure_price_list["Items"])
             azure_url = azure_price_list["NextPageLink"]
