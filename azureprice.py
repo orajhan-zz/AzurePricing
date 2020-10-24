@@ -44,7 +44,7 @@ if __name__ == "__main__":
             # Push documents into MongoDB
             collection.insert_many(azure_price_list["Items"])
             azure_url = azure_price_list["NextPageLink"]
-            print("Next URI: {}".format(azure_price_list["NextPageLink"]))
+            #print("Next URI: {}".format(azure_price_list["NextPageLink"]))
     # Azure has 135,023 SKUs as of now.
     print("{} documents have been update".format(collection.estimated_document_count()))
 
